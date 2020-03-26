@@ -1,0 +1,41 @@
+.fotter {
+  position: relative;
+  background-color: #191919;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  .fotter-contant {
+    margin: 0 auto;
+  }
+  img {
+    height: 17vh;
+    margin-bottom: 4vh;
+  }
+  li {
+    display: inline-block;
+    height: 38px;
+    width: 38px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 0 10px;
+  }
+  li:hover {
+    background-color: white;
+    a {
+      color: #686767;
+    }
+  }
+  a {
+    color: white;
+    font-size: 22px;
+  }
+
+  svg {
+    display: block;
+    margin: 6px auto;
+  }
+  p {
+    color: white;
+  }
+}

@@ -1,0 +1,135 @@
+.container-contact {
+  background-color: #191919;
+  color: white;
+}
+.article-header .overlay-contact {
+  background: rgb(25, 25, 25);
+  background: radial-gradient(
+    circle,
+    rgba(25, 25, 25, 0) 86%,
+    rgba(25, 25, 25, 0) 92%,
+    rgba(25, 25, 25, 0.7903536414565826) 100%,
+    rgba(25, 25, 25, 0.9444152661064426) 100%
+  );
+}
+.article-contant .title {
+  font-size: 3vw;
+}
+.contact-info {
+  display: grid;
+  grid-column-gap: 25px;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 30px;
+}
+.contact {
+  padding: 100px 0;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-column-gap: 60px;
+  grid-row-gap: 30px;
+}
+
+.article-header .extra-overlay {
+  background: rgb(25, 25, 25);
+  background: linear-gradient(
+    180deg,
+    rgba(25, 25, 25, 0) 62%,
+    rgba(25, 25, 25, 0.7707457983193278) 75%,
+    rgba(25, 25, 25, 0.9051995798319328) 81%,
+    rgba(25, 25, 25, 1) 93%
+  );
+}
+
+.contact-info input {
+  height: 60px;
+  background: #191919;
+  border: 1px solid white;
+  color: white;
+  padding: 0 20px;
+}
+
+.contact-info input:focus,
+.contact-info textarea:focus {
+  outline: none;
+}
+.contact-info .input3 {
+  height: 150px;
+  background: #191919;
+  border: 1px solid white;
+  color: white;
+  padding: 20px;
+  resize: none;
+  grid-column: 1 / span 2;
+}
+.contact-info .submit {
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: 100%;
+  border: 1px solid white;
+  height: 80px;
+  background: #191919;
+  color: white;
+}
+.contact-info .submit:hover {
+  color: #191919;
+  background: white;
+}
+::-webkit-input-placeholder {
+  /* Edge */
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+::placeholder {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.hire-me {
+  padding: 30px 0;
+  margin-bottom: 0;
+  text-align: justify;
+  line-height: 30px;
+}
+.hire-me h4 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.contact-info {
+  padding: 30px 0;
+}
+.contact-info .alert-info {
+  grid-column: 1 / span 2;
+}
+/* media for screen less than 600px */
+@media only screen and (max-width: 600px) {
+  .contact {
+    display: block;
+    grid-template-columns: 1fr;
+  }
+  .contact-info {
+    display: grid;
+    grid-column-gap: 25px;
+    grid-template-columns: 47% 47%;
+    grid-row-gap: 30px;
+  }
+  .article-contant .title {
+    font-size: 7vw;
+}
+}

@@ -1,0 +1,102 @@
+.nav-container {
+  background-color: #191919;
+  
+  .nav-links {
+    height: 0px;
+    overflow: hidden;
+    ul {
+      padding: 8px 60px;
+      list-style-type: none;
+    }
+    li {
+      padding: 15px;
+      border-bottom: 1px solid #686767;
+    }
+    a {
+      color: white;
+    }
+    a:hover {
+      color: #686767;
+    }
+  }
+  .mobileNav {
+    background-color: rgb(25, 25, 25);
+    overflow: hidden;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    .nav-social {
+      width: 30%;
+      ul {
+        margin: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        list-style: none;
+        float: right;
+        margin: 30px;
+      }
+      li {
+        height: 38px;
+        width: 38px;
+        border: 2px solid white;
+        border-radius: 50%;
+        margin-left: 10px;
+      }
+      li:hover {
+        background-color: white;
+        a {
+          color: #686767;
+        }
+      }
+      a {
+        color: white;
+        font-size: 22px;
+      }
+
+      svg {
+        display: block;
+        margin: 6px auto;
+      }
+    }
+    .nav-logo {
+      width: 40%;
+      img {
+        height: 100px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .nav-bars {
+      width: 30%;
+      color: white;
+      font-size: 40px;
+
+      svg {
+        margin: 30px;
+        margin-left: 45px;
+        display: block;
+        cursor: pointer;
+      }
+      svg:hover {
+        color: #686767;
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .mobileNav {
+      height: 70px;
+      .nav-logo {
+        img {
+          height: 65px;
+        }
+      }
+      .nav-bars {
+        font-size: 30px;
+        svg {
+          margin: 20px;
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+}

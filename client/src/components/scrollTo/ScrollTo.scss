@@ -1,0 +1,27 @@
+.scroll-to {
+  position: fixed;
+  bottom: 110px;
+  right: 2%;
+  visibility: hidden;
+  a {
+    cursor: pointer;
+    display: block;
+    height: 60px;
+    font-size: 22px;
+    width: 60px;
+    border: 2px solid #e8e8e8;
+    border-radius: 50%;
+    color: #b0b0b0;
+  }
+  a:hover{
+      background-color: white;
+      border: 2px solid white;
+      transition: all .2s ease 0s;
+      -webkit-transition: all .2s ease 0s;
+      -moz-transition: all .2s ease 0s;
+      -o-transition: all .2s ease 0s;
+  }
+  svg {
+    font-size: 40px;
+  }
+}

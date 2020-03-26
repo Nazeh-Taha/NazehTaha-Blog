@@ -1,0 +1,62 @@
+{
+  "name": "my-bloges",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:8000/",
+  "dependencies": {
+    "@blueprintjs/core": "^3.23.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.10.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@material-ui/core": "^4.9.3",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@tinymce/tinymce-react": "^3.4.0",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "gsap": "^3.2.4",
+    "jsonwebtoken": "^8.5.1",
+    "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
+    "ra-data-json-server": "^3.2.0",
+    "react": "^16.12.0",
+    "react-admin": "^3.2.1",
+    "react-dom": "^16.12.0",
+    "react-facebook-login": "^4.1.1",
+    "react-google-login": "^5.1.1",
+    "react-gsap": "^1.2.0",
+    "react-intersection-observer": "^8.26.1",
+    "react-loading-screen": "0.0.17",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.1",
+    "react-scroll": "^1.7.16",
+    "react-scroll-to": "^3.0.0-beta.6",
+    "react-scrollmagic": "^2.1.1",
+    "react-share": "^4.0.1",
+    "react-spinners": "^0.8.1",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

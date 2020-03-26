@@ -1,0 +1,40 @@
+.contact-info2 {
+  padding: 40px 70px;
+}
+.contact-info2 ul {
+  list-style: none;
+}
+.contact-info2 li {
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+.contact-info2 li:hover,
+.contact-info2 li a:hover {
+  background-color: white;
+  color: #191919;
+}
+.contact-info2 a:hover {
+  color: #191919;
+}
+.contact-info2 svg {
+  margin-left: 50px;
+}
+.contact-info2 li a {
+  color: white;
+  display: block;
+}
+.contact-info2 p {
+  display: inline-block;
+  margin-left: 30px;
+  margin-bottom: 0;
+  padding: 5px;
+}
+@media only screen and (max-width: 600px) {
+  .contact-info2 {
+    padding: 0;
+  }
+}
