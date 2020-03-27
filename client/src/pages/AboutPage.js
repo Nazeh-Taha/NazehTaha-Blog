@@ -30,7 +30,7 @@ const AboutPage = () => {
           <img src={image} alt="" />
           <div className="article-contant">
             <h1 className="title">About the blog author</h1>
-            <p>“ You cannot change what you are, only what you do.”</p>
+            <p>“You cannot change what you are, only what you do.”</p>
           </div>
         </div>
         <div className="container-contact">

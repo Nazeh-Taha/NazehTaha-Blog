@@ -49,7 +49,7 @@ const Article = ({ match }) => {
           <div className="article-contant">
             <span>{articleInfo.categore}</span>
             <h1>{articleInfo.title}</h1>
-            <p>{articleInfo.time}</p>
+            <p className="post-date">{articleInfo.time}</p>
           </div>
         </div>
         <section

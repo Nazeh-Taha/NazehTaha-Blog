@@ -65,6 +65,7 @@ const ContactMe = () => {
           <img src={image} alt="" />
           <div className="article-contant">
             <h1 className="title">Contact me right here</h1>
+            <p>“There's not a lot you should do to keep in touch.”</p>
           </div>
         </div>
         <div className="container-contact">

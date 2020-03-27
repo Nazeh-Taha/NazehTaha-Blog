@@ -19,7 +19,7 @@
   height: 80vh;
 }
 .articles-conainer .time-span {
-  color: #303030;
+  color: #616161;
 }
 .articles-conainer p {
   color: #616161;
@@ -53,11 +53,13 @@
   margin: 10vh 0;
 }
 .article-contant p{
-  font-size: 1.5vw;
-    font-weight: 700;
+  font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 3px;
 }
 .load-more-btn {
-  border-bottom: 1px solid #616161;
+  
   display: flex;
   justify-content: center;
   padding-bottom: 120px;
