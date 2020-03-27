@@ -21,22 +21,22 @@ const HomePage = () => {
   ]);
 
   const onHover = i => {
-    TweenMax.to(desc[i], 0.2, {
+    TweenMax.to(desc[i], 0.3, {
       height: 130,
       ease: Power3.easeOut
     });
-    TweenMax.to(desc[i], 0.2, {
+    TweenMax.to(desc[i], 0.3, {
       opacity: 1,
       ease: Power3.easeOut,
       delay: 0.2
     });
   };
   const onLeave = i => {
-    TweenMax.to(desc[i], 0.2, { height: 0, ease: Power3.easeOut });
-    TweenMax.to(desc[i], 0.2, {
+    TweenMax.to(desc[i], 0.3, { height: 0, ease: Power3.easeOut });
+    TweenMax.to(desc[i], 0.3, {
       opacity: 0,
       ease: Power3.easeOut,
-      delay: 0.2
+      delay: 0.3
     });
   };
   useEffect(() => {

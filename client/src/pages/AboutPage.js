@@ -16,7 +16,7 @@ const AboutPage = () => {
   //for loading bages
   setInterval(() => {
     setLoad(false);
-  }, 500);
+  }, 700);
 
   window.scroll(0, 0);
   return (
@@ -30,11 +30,13 @@ const AboutPage = () => {
           <img src={image} alt="" />
           <div className="article-contant">
             <h1 className="title">About the blog author</h1>
+            <p>“ You cannot change what you are, only what you do.”</p>
           </div>
         </div>
         <div className="container-contact">
           <div className="contact">
             <div className="hire-me">
+              <h4>ِAbout</h4>
               <p>
                 I'm a full-stack web developer, my first experience in building
                 the website was under a job title Front-end developer, I've been
@@ -66,14 +68,10 @@ const AboutPage = () => {
                   </a>
                 </li>
                 <li>
-                 <a
-                    target="_blank"
-                    href="https://github.com/Nazeh-Taha"
-                  >
+                  <a target="_blank" href="https://github.com/Nazeh-Taha">
                     <FontAwesomeIcon icon={["fab", "github"]} />
                     <p>Github</p>
                   </a>
-                 
                 </li>
                 <li>
                   <a target="_blank" href="https://www.facebook.com/nazeh200/">

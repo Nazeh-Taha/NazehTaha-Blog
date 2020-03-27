@@ -1,4 +1,5 @@
 .container-contact {
+  padding-bottom: 30px;
   background-color: #191919;
   color: white;
 }
@@ -14,6 +15,7 @@
 }
 .article-contant .title {
   font-size: 3vw;
+  font-weight: 900;
 }
 .contact-info {
   display: grid;
@@ -22,7 +24,6 @@
   grid-row-gap: 30px;
 }
 .contact {
-  padding: 100px 0;
   width: 80%;
   margin: 0 auto;
   display: grid;
@@ -131,5 +132,5 @@
   }
   .article-contant .title {
     font-size: 7vw;
-}
+  }
 }

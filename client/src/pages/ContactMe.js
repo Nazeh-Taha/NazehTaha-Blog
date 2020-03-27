@@ -78,45 +78,48 @@ const ContactMe = () => {
                 talk to. Send me a message using the form or my contact info.
               </p>
             </div>
-            <div >
+            <div>
               <form className="contact-info">
-              <input
-                type="text"
-                placeholder="FULL NAME"
-                className="input1"
-                value={name}
-                onChange={event => setName(event.target.value)}
-                required
-              />
-              <input
-                type="email"
-                placeholder="E-MAIL ADDRESS"
-                className="input2"
-                value={email}
-                onChange={event => setEmail(event.target.value)}
-                required
-              />
-              <textarea
-                placeholder="YOUR MESSAGE HERE"
-                className="input3"
-                value={message}
-                onChange={event => setMessage(event.target.value)}
-                required
-              />
-              <button
-                type="submit"
-                value="CONTACT"
-                className="submit"
-                onClick={(e) => {sendEmail(); e.preventDefault()}}
-              >
-                CONTACT{" "}
-                <BeatLoader
-                  css={override}
-                  size={14}
-                  color={"gray"}
-                  loading={isSend}
+                <input
+                  type="text"
+                  placeholder="FULL NAME"
+                  className="input1"
+                  value={name}
+                  onChange={event => setName(event.target.value)}
+                  required
                 />
-              </button>
+                <input
+                  type="email"
+                  placeholder="E-MAIL ADDRESS"
+                  className="input2"
+                  value={email}
+                  onChange={event => setEmail(event.target.value)}
+                  required
+                />
+                <textarea
+                  placeholder="YOUR MESSAGE HERE"
+                  className="input3"
+                  value={message}
+                  onChange={event => setMessage(event.target.value)}
+                  required
+                />
+                <button
+                  type="submit"
+                  value="CONTACT"
+                  className="submit"
+                  onClick={e => {
+                    sendEmail();
+                    e.preventDefault();
+                  }}
+                >
+                  CONTACT{" "}
+                  <BeatLoader
+                    css={override}
+                    size={14}
+                    color={"gray"}
+                    loading={isSend}
+                  />
+                </button>
               </form>
               {alert ? <Alert msg={alert} /> : null}
             </div>

@@ -3,11 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: poppins, sans-serif;
-  
 }
-html{
+html {
   zoom: 75%;
- 
 }
 body::-webkit-scrollbar {
   width: 1em;
@@ -129,14 +127,12 @@ color: #c4c4c4;
   .grid-container {
     grid-template-columns: 1fr;
   }
-  
 }
 @media only screen and (min-width: 1367px) {
   .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   }
-
 }
 @media only screen and (min-width: 1708px) {
   .grid-container {

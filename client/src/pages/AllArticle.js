@@ -52,7 +52,7 @@ const AllArticle = () => {
     setSkip(skip);
   };
   return (
-    <>
+    <div style={{background:'#191919'}}>
       <LoadingScreen loading={load} bgColor="#191919" spinnerColor="white">
         <NavBar />
         <div className="article-header">
@@ -61,7 +61,7 @@ const AllArticle = () => {
           <div className="overlay extra-overlay"></div>
           <img src={image} alt="" />
           <div className="article-contant">
-            <h1 className="title">ALL ARTICLES</h1>
+            <h1 className="title">All Articles</h1>
             <p>“Think before you speak. Read before you think.”</p>
           </div>
         </div>
@@ -103,7 +103,7 @@ const AllArticle = () => {
         </div>
         <Fotter />
       </LoadingScreen>
-    </>
+    </div>
   );
 };
 
