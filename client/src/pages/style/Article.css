@@ -59,21 +59,20 @@
 }
 .contant-section span {
   float: left;
-  height: 48px;
-  width: 48px;
-  line-height: 55px;
-  font-size: 82px;
+  line-height: 61px;
+  font-size: 68px;
   color: #191919;
   text-align: center;
-  margin: 17px 30px 0 0;
-  font-weight: bold;
+  margin: 10px 30px 0 0;
+  font-weight: 700;
 }
 .contant-section p {
   margin-bottom: 30px;
 }
 .contant-section img {
   display: block;
-  width: 80%;
+  height: auto;
+  max-width: 80%;
   margin: 0 auto;
 }
 .social-share {

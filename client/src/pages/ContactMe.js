@@ -47,6 +47,7 @@ const ContactMe = () => {
         });
     } else {
       setAleart("Sorry Empty Inputs");
+      setIsSend(false);
     }
   };
   //for loading bage
