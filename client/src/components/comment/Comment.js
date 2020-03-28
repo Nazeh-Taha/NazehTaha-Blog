@@ -10,25 +10,31 @@ library.add(fab, faGoogle);
 const Comment = ({ id }) => {
   const [allComment, setAllComment] = useState({});
   const [comment, setComment] = useState("");
+  const [msg, setMsg] = useState("");
   const [facebook, setFacebook] = useState({
     name: "",
     picture: ""
   });
   //send comment and sender info to server
   const sendInfo = async () => {
-    await fetch("/api/article/comments", {
-      method: "post",
-      body: JSON.stringify({
-        postId: id,
-        name: facebook.name,
-        picture: facebook.picture,
-        comment: comment
-      }),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    });
-    setComment('');
+    if (comment) {
+      await fetch("/api/article/comments", {
+        method: "post",
+        body: JSON.stringify({
+          postId: id,
+          name: facebook.name,
+          picture: facebook.picture,
+          comment: comment
+        }),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+      fetchComment();
+      setComment("");
+    } else {
+      setMsg("Please Write a Comment");
+    }
   };
   //for google login
   const responseGoogle = response => {
@@ -72,22 +78,21 @@ const Comment = ({ id }) => {
         picture: userInfo.picture
       });
     }
-  }, []);
-
-  useEffect(() => {
-    const fetchComment = async () => {
-      const result = await fetch(`/api/article/comments/${id}`);
-      const body = await result.json();
-      setAllComment(body);
-      
-    };
     fetchComment();
-   
-  }, [allComment]);
+  }, []);
+  useEffect(() => {
+    if (comment) {
+      setMsg("");
+    }
+  }, [comment]);
+  const fetchComment = async () => {
+    const result = await fetch(`/api/article/comments/${id}`);
+    const body = await result.json();
+    setAllComment(body);
+  };
 
   const componentClicked = () => {};
 
-  
   return (
     <div className="comment-container">
       <h2>{allComment.length} Comments</h2>
@@ -98,9 +103,9 @@ const Comment = ({ id }) => {
                 <img src={item.picture} alt="" />
               </div>
               <div className="comment-text">
-              <h3>{item.name}</h3>
-              <span className="time-span">{item.time}</span>
-        <p>{item.comment}</p>
+                <h3>{item.name}</h3>
+                <span className="time-span">{item.time}</span>
+                <p>{item.comment}</p>
               </div>
             </div>
           ))
@@ -113,11 +118,21 @@ const Comment = ({ id }) => {
             value={comment}
             onChange={event => setComment(event.target.value)}
           />
+          <p>{msg ? msg : null}</p>
           <input type="submit" value="SUBMIT" onClick={() => sendInfo()} />
         </div>
       ) : (
         <div className="social-login">
           <p>Login To Comment</p>
+          <GoogleLogin
+            clientId="20817296394-rbgm22c52mkvn9n4afneag376utjpp2l.apps.googleusercontent.com"
+            buttonText={<FontAwesomeIcon icon={faGoogle} />}
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            icon={false}
+            className="face-log"
+            cookiePolicy={"single_host_origin"}
+          />
           <FacebookLogin
             appId="560752488125515"
             autoLoad={false}
@@ -127,16 +142,6 @@ const Comment = ({ id }) => {
             cssClass="face-log"
             onClick={() => componentClicked}
             callback={responseFacebook}
-          />
-
-          <GoogleLogin
-            clientId="20817296394-rbgm22c52mkvn9n4afneag376utjpp2l.apps.googleusercontent.com"
-            buttonText={<FontAwesomeIcon icon={faGoogle} />}
-            onSuccess={responseGoogle}
-            onFailure={responseGoogle}
-            icon={false}
-            className="face-log"
-            cookiePolicy={"single_host_origin"}
           />
         </div>
       )}

@@ -8,6 +8,12 @@
   }
   .comment-input{
     border-top: 1px solid #e0e0e0;
+    p{
+      display: contents;
+      color: red;
+      font-size: 12px;
+      font-weight: 100;
+    }
   }
   .comment-text{
     padding: 0 0 0 100px;

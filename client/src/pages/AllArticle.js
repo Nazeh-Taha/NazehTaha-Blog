@@ -20,6 +20,7 @@ const AllArticle = () => {
   const [limit, setLimit] = useState(4);
   const [articleSize, setArticleSize] = useState(0);
   const [isSend, setIsSend] = useState(false);
+  
   useEffect(() => {
     const range = {
       skip: Skip,
