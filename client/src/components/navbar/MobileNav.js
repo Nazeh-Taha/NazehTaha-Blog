@@ -16,7 +16,7 @@ const MobileNav = ({ width }) => {
 
   const handelExpand = () => {
     if (click === false) {
-      TweenMax.to(nav, 0.8, { height: 270, ease: Power3.easeOut });
+      TweenMax.to(nav, 0.8, { height: 300, ease: Power3.easeOut });
       setClick(true);
     } else {
       TweenMax.to(nav, 0.8, { height: 0, ease: Power3.easeOut });
@@ -86,6 +86,46 @@ const MobileNav = ({ width }) => {
             <Link to="/contact">CONTACT</Link>
           </li>
         </ul>
+        {width < 700 ? (
+          <div className="mobileNav2">
+            <div className="nav-social">
+              <ul>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/nazeh-taha/"
+                  >
+                    <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.facebook.com/nazeh200/">
+                    <FontAwesomeIcon
+                      icon={["fab", "facebook-f"]}
+                      className="svg2"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/nazeh_taha/"
+                  >
+                    <FontAwesomeIcon
+                      icon={["fab", "instagram"]}
+                      className="svg"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="http://nazeh-taha.herokuapp.com/">
+                    <FontAwesomeIcon icon={faGlobe} />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );

@@ -1,12 +1,13 @@
 .nav-container {
   background-color: #191919;
-  
+
   .nav-links {
     height: 0px;
     overflow: hidden;
     ul {
       padding: 8px 60px;
       list-style-type: none;
+      margin-bottom: 3px;
     }
     li {
       padding: 15px;
@@ -79,6 +80,44 @@
       }
       svg:hover {
         color: #686767;
+      }
+    }
+  }
+  .mobileNav2 {
+    .nav-social {
+      ul {
+        margin: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        list-style: none;
+      }
+      li {
+        height: 33px;
+        width: 33px;
+        border: 1px solid white;
+        border-radius: 50%;
+        margin-left: 10px;
+      }
+      li:hover {
+        background-color: white;
+        a {
+          color: #686767;
+        }
+      }
+      a {
+        color: white;
+        font-size: 17px;
+      }
+
+      svg {
+        display: block;
+        margin: -8px;
+      }
+      .svg {
+        margin: -7px;
+      }
+      .svg2 {
+        margin: -8px -5px;
       }
     }
   }
