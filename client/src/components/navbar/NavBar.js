@@ -54,17 +54,25 @@ const NavBar = () => {
 
                     <div className="nav-links">
                       <ul>
-                        <li >
-                          <NavLink exact to="/" activeClassName="home">HOME</NavLink>
+                        <li>
+                          <NavLink exact to="/" activeClassName="home">
+                            HOME
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/articles-list" activeClassName="home">ARTICLES</NavLink>
+                          <NavLink to="/articles-list" activeClassName="home">
+                            ARTICLES
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/about" activeClassName="home">ABOUT ME</NavLink>
+                          <NavLink to="/about" activeClassName="home">
+                            ABOUT ME
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/contact" activeClassName="home">CONTACT</NavLink>
+                          <NavLink to="/contact" activeClassName="home">
+                            CONTACT
+                          </NavLink>
                         </li>
                       </ul>
                     </div>
@@ -77,6 +85,7 @@ const NavBar = () => {
                           >
                             <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
                           </a>
+                          <span className="tooltiptext">My Linkedin</span>
                         </li>
                         <li>
                           <a
@@ -85,6 +94,7 @@ const NavBar = () => {
                           >
                             <FontAwesomeIcon icon={["fab", "facebook-f"]} />
                           </a>
+                          <span className="tooltiptext">My Facebook</span>
                         </li>
                         <li>
                           <a
@@ -93,6 +103,7 @@ const NavBar = () => {
                           >
                             <FontAwesomeIcon icon={["fab", "instagram"]} />
                           </a>
+                          <span className="tooltiptext">My Instagram</span>
                         </li>
                         <li>
                           <a
@@ -101,6 +112,7 @@ const NavBar = () => {
                           >
                             <FontAwesomeIcon icon={faGlobe} />
                           </a>
+                          <span className="tooltiptext">Online Portfolio</span>
                         </li>
                       </ul>
                     </div>

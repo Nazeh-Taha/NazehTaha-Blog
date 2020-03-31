@@ -22,8 +22,10 @@
   }
   li:hover {
     background-color: white;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
     a {
-      color: #686767;
+      color: #191919;
     }
   }
   a {

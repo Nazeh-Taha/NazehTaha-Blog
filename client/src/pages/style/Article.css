@@ -98,6 +98,8 @@
 }
 
 .socila-share-link:hover {
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
   background-color: #191919;
   color: white;
 }

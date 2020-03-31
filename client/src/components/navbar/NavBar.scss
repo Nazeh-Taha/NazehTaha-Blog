@@ -33,9 +33,12 @@
     margin: 0 5px;
     text-align: center;
   }
+
   .nav-links li a:hover {
     border: 2px solid white;
     border-radius: 25px;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
   }
   .home {
     border: 2px solid white;
@@ -68,13 +71,46 @@
     border: 2px solid white;
     border-radius: 50%;
     margin-left: 10px;
-  }
-  .nav-social li:hover {
-    background-color: white;
-    a {
-      color: #686767;
+    position: relative;
+    .tooltiptext {
+      opacity: 0;
+      width: 120px;
+      background-color: #303030;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      top: 140%;
+      right: -125%;
+      margin-left: -60px;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #303030 transparent;
+      }
+    }
+    &:hover {
+      background-color: white;
+      transition: 0.5s;
+      -webkit-transition: 0.5s;
+      a {
+        color: #191919;
+      }
+      .tooltiptext {
+        opacity: 0.8;
+        transition: opacity 1s;
+        -webkit-transition: opacity 1s;
+      }
     }
   }
+
   .nav-social a {
     color: white;
     font-size: 22px;

@@ -54,6 +54,8 @@
     box-shadow: none !important;
   }
   .face-log:hover {
+    transition: 0.7s;
+    -webkit-transition: 0.7s;
     background: #191919 !important;
     color: white !important;
   }
@@ -105,6 +107,8 @@
     margin-top: 15px;
   }
   input:hover{
+    transition: 0.7s;
+    -webkit-transition: 0.7s;
       color: white;
       background: #191919;
   }

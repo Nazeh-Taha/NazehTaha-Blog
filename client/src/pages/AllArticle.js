@@ -6,21 +6,32 @@ import LoadingScreen from "react-loading-screen";
 import image from "../image/blog.jpg";
 import "./style/AllArticle.css";
 import axius from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faShareAltSquare } from "@fortawesome/free-solid-svg-icons";
+import { fab, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { css } from "@emotion/core";
 import BeatLoader from "react-spinners/BeatLoader";
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton
+} from "react-share";
 const override = css`
   height: 10px;
   width: 10px
   margin: 0 auto;
 `;
+library.add(fab, faShareAltSquare);
 const AllArticle = () => {
+  const shareUrl = window.location.href; //share link
   const [load, setLoad] = useState(true);
   const [articles, setArticles] = useState([]);
   const [Skip, setSkip] = useState(0);
   const [limit, setLimit] = useState(4);
   const [articleSize, setArticleSize] = useState(0);
   const [isSend, setIsSend] = useState(false);
-  
+
   useEffect(() => {
     const range = {
       skip: Skip,
@@ -53,7 +64,7 @@ const AllArticle = () => {
     setSkip(skip);
   };
   return (
-    <div style={{background:'#191919'}}>
+    <div style={{ background: "#191919" }}>
       <LoadingScreen loading={load} bgColor="#191919" spinnerColor="white">
         <NavBar />
         <div className="article-header">
@@ -78,6 +89,46 @@ const AllArticle = () => {
                   {item.title}
                 </h1>
               </Link>
+              <h5>
+                Posted at {item.time} | By Admin | in{" "}
+                {item.categore.substring(0, 1) +
+                  item.categore.substring(1).toLowerCase()}{" "}
+                |
+                <span className="share">
+                  <FontAwesomeIcon icon={faShareAltSquare} /> Share
+                  <span className="tooltiptext">
+                    <div className="share-span-link">
+                      <FacebookShareButton
+                        url={shareUrl}
+                        quote={item.title}
+                        className="Demo__some-network__share-button"
+                      >
+                        <FontAwesomeIcon icon={["fab", "facebook-f"]} />
+                      </FacebookShareButton>
+                    </div>
+                    <div className="share-span-link">
+                      <TwitterShareButton
+                        url={shareUrl}
+                        quote={item.title}
+                        className="Demo__some-network__share-button"
+                      >
+                        <FontAwesomeIcon icon={faTwitter} />
+                      </TwitterShareButton>
+                    </div>
+                    <div className="share-span-link">
+                      <LinkedinShareButton
+                        url={shareUrl}
+                        title={item.title}
+                        summary={item.image}
+                        source={item.image}
+                        className="Demo__some-network__share-button"
+                      >
+                        <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
+                      </LinkedinShareButton>
+                    </div>
+                  </span>
+                </span>
+              </h5>
               <section
                 dangerouslySetInnerHTML={{
                   __html: item.body.substring(0, 200) + "....</p>"

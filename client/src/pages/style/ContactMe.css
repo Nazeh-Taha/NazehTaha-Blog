@@ -76,6 +76,8 @@
   color: white;
 }
 .contact-info .submit:hover {
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
   color: #191919;
   background: white;
 }

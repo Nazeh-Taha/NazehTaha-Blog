@@ -17,6 +17,8 @@
       color: white;
     }
     a:hover {
+      transition: 0.5s;
+      -webkit-transition: 0.5s;
       color: #686767;
     }
   }
@@ -45,8 +47,10 @@
       }
       li:hover {
         background-color: white;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
         a {
-          color: #686767;
+          color: #191919;
         }
       }
       a {
@@ -79,6 +83,8 @@
         cursor: pointer;
       }
       svg:hover {
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
         color: #686767;
       }
     }
@@ -99,9 +105,12 @@
         margin-left: 10px;
       }
       li:hover {
+        cursor: pointer;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
         background-color: white;
         a {
-          color: #686767;
+          color: #191919;
         }
       }
       a {
@@ -111,10 +120,10 @@
 
       svg {
         display: block;
-        margin: -8px;
+        margin: -8px -8px;
       }
       .svg {
-        margin: -7px;
+        margin: -8px -7px;
       }
       .svg2 {
         margin: -8px -5px;
