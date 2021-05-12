@@ -22,7 +22,7 @@
     "express-fileupload": "^1.1.6",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.2",
-    "nodemailer": "^6.4.4"
+    "nodemailer": "^6.4.16"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
